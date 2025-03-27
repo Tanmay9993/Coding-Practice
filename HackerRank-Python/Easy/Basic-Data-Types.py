@@ -79,6 +79,29 @@ if __name__ == '__main__':
             pass
             
 
+# 5. Tuple
+if __name__ == '__main__':
+    n = int(input())
+    integer_list = map(int, input().split())
+    value = hash(tuple(integer_list))
+    print(value)
 
+
+# 6. List Comprehension
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    # Generate all possible [i, j, k] combinations where 0 ≤ i ≤ x, 0 ≤ j ≤ y, 0 ≤ k ≤ z
+    # Include only those where the sum i + j + k is not equal to n
+    result = [[i, j, k] 
+              for i in range(x + 1) 
+              for j in range(y + 1) 
+              for k in range(z + 1) 
+              if (i + j + k) != n]
+
+    print(result)
 
 
