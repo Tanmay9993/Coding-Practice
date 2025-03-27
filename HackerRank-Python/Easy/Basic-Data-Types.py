@@ -30,7 +30,22 @@ if __name__ == '__main__':
         print(i)
 
 
-# 3. 
+# 3. Find the percentage
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    
+    # Take Input
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    # Calculate Avg
+    scores = student_marks[query_name]
+    average = sum(scores) / len(scores)
+    print(f"{average:.2f}")
        
 
 
