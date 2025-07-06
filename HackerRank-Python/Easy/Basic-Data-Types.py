@@ -29,6 +29,28 @@ if __name__ == '__main__':
     for i in second_lowest_name:
         print(i)
 
+if __name__ == '__main__':
+    name_list = []
+    score_list = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        
+        name_list.append(name)
+        score_list.append(score)
+        
+    name_score_pair = list(zip(score_list,name_list))
+    
+    score_val = list(set(score_list))
+    score_val.sort()
+    second_num = score_val[1]
+    
+    get_second = [name for score, name in name_score_pair if score == second_num]
+    get_second.sort()
+    
+    for name in get_second:
+        print(name)
+    
 
 # 3. Find the percentage
 if __name__ == '__main__':
