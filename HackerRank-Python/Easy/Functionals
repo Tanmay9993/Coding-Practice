@@ -1,0 +1,22 @@
+# 1. Map & Lambda
+
+cube = lambda x:x**3 # complete the lambda function 
+
+def fibonacci(n):
+    
+    output = [0,1]
+    for i in range(0,n-2):
+        value = output[i] + output[i+1]
+        output.append(value) 
+        
+    if n == 0:
+        return []
+    elif n ==1:
+        return [0]
+    else:        
+        return(output)    
+    # return a list of fibonacci numbers
+
+if __name__ == '__main__':
+    n = int(input())
+    print(list(map(cube, fibonacci(n))))
